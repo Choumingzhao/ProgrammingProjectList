@@ -6,7 +6,7 @@ def pigLatin(word):
     if word.isalpha() is False:
         raise TypeError
     lower = word.lower()
-    # When word starts with vowel
+    # When word is not started with vowel letter
     if all([not lower.startswith(i) for i in 'aeiou']):
         head = re.match(r'[bcdfghjklmnpqrstvwxyz]+', lower).group()
         result = lower.replace(head, '')+head+'ay'
